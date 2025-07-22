@@ -8,6 +8,41 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         
+                /* Preloader styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #preloader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .preloader-gif {
+            max-width: 200px;
+            max-height: 200px;
+        }
+        
+        /* Hide main content initially */
+        #main-content {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        
+        #main-content.show {
+            opacity: 1;
+        }
+
         body {
             font-family: 'Inclusive Sans', sans-serif;
             background-color: white;
@@ -32,9 +67,48 @@
         .work-item {
             margin-bottom: 0.5em;
         }
+
+        /* Mobile responsive adjustments */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+                padding: 1em;
+            }
+            
+            img {
+                max-width: 100%;
+                height: auto !important;
+            }
+            
+            .preloader-gif {
+                max-width: 150px;
+                max-height: 150px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 14px;
+                padding: 0.5em;
+            }
+            
+            .preloader-gif {
+                max-width: 100px;
+                max-height: 100px;
+            }
+        }
+
+
     </style>
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="images/2024_preloader_memory-tapes.gif" alt="Loading..." class="preloader-gif">
+    </div>
+
+        <!-- Main Content -->
+    <div id="main-content">
     <div>
         <img src="images/tzu.jpg" alt="tzu" height="50"> Tzu-Yun Wei (they/them) is a Taiwanese artist/designer living in Taipei. They view design as a strategic tactic to foster relatedness.<br>
         Their process-based practice explores identity, multiplicity in lived experience through drawing/writing, design and curations.
@@ -66,5 +140,39 @@
         <span class="title"> / Contact / </span><br>
         Email: tzuyunwork(at)gmail.com | <a href="https://tzusnotebook.substack.com/">Substack</a> | <a href="https://www.instagram.com/bushwasroom/">Instagram </a>
     </div>
+
+    <script>
+        // Preloader functionality
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+            
+            // Wait a minimum of 2 seconds to show the preloader
+            setTimeout(function() {
+                preloader.classList.add('fade-out');
+                mainContent.classList.add('show');
+                
+                // Remove preloader from DOM after fade out
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 2000);
+        });
+        
+        // Fallback: Hide preloader after 5 seconds regardless
+        setTimeout(function() {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+            
+            if (preloader && !preloader.classList.contains('fade-out')) {
+                preloader.classList.add('fade-out');
+                mainContent.classList.add('show');
+                
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        }, 5000);
+    </script>    
 </body>
 </html>
