@@ -8,3 +8,9 @@ h1 {
     color: #333;
     font-size: 2em;
 }
+
+.element {
+  width: 100vw;     /* Viewport width */
+  height: 100vh;    /* Viewport height */
+  font-size: 4vmin; /* Responsive to smallest viewport dimension */
+}
