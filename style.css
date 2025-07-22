@@ -10,7 +10,7 @@ h1 {
 }
 
 .element {
-  width: 150vw;     /* Viewport width */
+  width: 200vw;     /* Viewport width */
   height: 100vh;    /* Viewport height */
   font-size: 4vmin; /* Responsive to smallest viewport dimension */
 }
