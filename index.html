@@ -68,36 +68,35 @@
             margin-bottom: 0.5em;
         }
 
-         /* Column Layout Styles */
-        .project-section {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2em;
-            margin: 2em 0;
-            align-items: start;
+        /* Mobile responsive adjustments */
+        /* @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+                padding: 1em;
+            }
+            
+            img {
+                max-width: 100%;
+                height: auto !important;
+            }
+            
+            .preloader-gif {
+                max-width: 150px;
+                max-height: 150px;
+            }
         }
         
-        .image-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1em;
-            align-items: flex-start;
-        }
-        
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-        
-        .text-container {
-            padding: 0 1em;
-        }
-        
-        .text-container h3 {
-            margin: 0 0 0.5em 0;
-            font-weight: 400;
-        }
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 14px;
+                padding: 0.5em;
+            }
+            
+            .preloader-gif {
+                max-width: 100px;
+                max-height: 100px;
+            }
+        } */
 
 
     </style>
@@ -109,89 +108,32 @@
     </div>
 
         <!-- Main Content -->
-        <span class="title"> / Projects / </span>
+    <div id="main-content">
+    <div>
+        <img src="images/tzu.jpg" alt="tzu" height="50"> Tzu-Yun Wei (they/them) is a Taiwanese artist/designer living in Taipei. They view design as a strategic tactic to foster relatedness. Their process-based practice explores identity, multiplicity in lived experience through drawing/writing, design and curations.
+        <br><br>
+        They have collaborated with mission-driven nonprofits like Right To Play, Ugly Duckling Presse, Processing Foundation, Taipei Art Book Fair and ONEeducation to develop teaching materials for related communities.
+        As an educator, Tzu-Yun has led courses and workshops in design writing and poetic technology for Pratt Institute and National Taiwan University of Science and Technology.
+        <br><br>
+        Tzu-Yun holds an M.F.A. in Communications Design from Pratt Institute. Currently works as a co-founder Co-Assembly—a Taiwanese co-op investigating the collective power of humanizing data through research, experimentation and organizing.
+    </div>
+    
+    <div>
+        <br><br>
+        <span class="title"> / Projects / </span><br>
+        <img src="images/WMABAB_06.JPG" alt="WMABAB_06" height="150">
+        [2024-ongoing] Printing in Progress → What Makes A Book A Book <img src="images/things_weve_done_here_make_it_here_01.png" alt="Things we've done here make it here 01" height="180"> <img src="images/things_weve_done_here_make_it_here_08.png" alt="Things we've done here make it here 04" height="150">
+        <img src="images/things_weve_done_here_make_it_here_04.png" alt="Things we've done here make it here 08" height="100"> [2024] Things we've done here make it "here" <img src="images/Nation_of_Scatterbrain_01.jpg" alt="Nation_of_Scatterbrain_01" height="300">
+        <img src="images/Nation_of_Scatterbrain_02.jpg" alt="Nation_of_Scatterbrain_02" height="200"> <img src="images/Nation_of_Scatterbrain_03.jpg" alt="Nation_of_Scatterbrain_03" height="100"> [2024] Nation of Scatterbrain
+        <img src="images/asterisk_01.png" alt="asterisk_01" height="100"> <img src="images/asterisk_03.GIF" alt="asterisk_03" height="150"> <img src="images/asterisk_02.gif" alt="asterisk_02" height="150"> [2022-2024] asterisk as a lifeform
 
-        <!-- Project 1: What Makes A Book A Book -->
-        <div class="project-section">
-            <div class="image-container">
-                <img src="images/WMABAB_06.JPG" alt="WMABAB_06" height="150">
-            </div>
-            <div class="text-container">
-                <h3>[2024-ongoing] Printing in Progress → What Makes A Book A Book</h3>
-            </div>
-        </div>
-
-        <!-- Project 2: Things we've done here -->
-        <div class="project-section">
-            <div class="image-container">
-                <img src="images/things_weve_done_here_make_it_here_01.png" alt="Things we've done here make it here 01" height="180">
-                <img src="images/things_weve_done_here_make_it_here_08.png" alt="Things we've done here make it here 04" height="150">
-                <img src="images/things_weve_done_here_make_it_here_04.png" alt="Things we've done here make it here 08" height="100">
-            </div>
-            <div class="text-container">
-                <h3>[2024] Things we've done here make it "here"</h3>
-            </div>
-        </div>
-
-        <!-- Project 3: Nation of Scatterbrain -->
-        <div class="project-section">
-            <div class="image-container">
-                <img src="images/Nation_of_Scatterbrain_01.jpg" alt="Nation_of_Scatterbrain_01" height="300">
-                <img src="images/Nation_of_Scatterbrain_02.jpg" alt="Nation_of_Scatterbrain_02" height="200">
-                <img src="images/Nation_of_Scatterbrain_03.jpg" alt="Nation_of_Scatterbrain_03" height="100">
-            </div>
-            <div class="text-container">
-                <h3>[2024] Nation of Scatterbrain</h3>
-            </div>
-        </div>
-
-        <!-- Project 4: Asterisk as a lifeform -->
-        <div class="project-section">
-            <div class="image-container">
-                <img src="images/asterisk_01.png" alt="asterisk_01" height="100">
-                <img src="images/asterisk_03.GIF" alt="asterisk_03" height="150">
-                <img src="images/asterisk_02.gif" alt="asterisk_02" height="150">
-            </div>
-            <div class="text-container">
-                <h3>[2022-2024] asterisk as a lifeform</h3>
-            </div>
-        </div>
-
-        <span class="title"> / Education / </span>
-
-        <!-- Education 1: Design Pathways -->
-        <div class="project-section">
-            <div class="image-container">
-                <img src="images/design_paths_2.jpg" alt="design_paths_2" height="150">
-            </div>
-            <div class="text-container">
-                <h3>[2025] Design Pathways → self-research → manifesto (NTUST)</h3>
-            </div>
-        </div>
-
-        <!-- Education 2: Printing With Purpose -->
-        <div class="project-section">
-            <div class="image-container">
-                <img src="images/Printing_with_purpose.jpg" alt="Printing_with_purpose" height="150">
-            </div>
-            <div class="text-container">
-                <h3>[2024] Printing With Purpose: Letterpress, Bookmaking, and Collective Design (Pratt)</h3>
-            </div>
-        </div>
-
-        <span class="title"> / Visual Design Service / </span>
-
-        <!-- Service: TPABF -->
-        <div class="project-section">
-            <div class="image-container">
-                <img src="images/tpabf_03.png" alt="tpabf_03" height="200">
-                <img src="images/tpabf_06.jpg" alt="tpabf_06" height="100">
-                <img src="images/tpabf_07.png" alt="tpabf_07" height="150">
-            </div>
-            <div class="text-container">
-                <h3>[2024] TPABF: Groovy Quote, Key Visual Design</h3>
-            </div>
-        </div>
+        <span class="title"> / Education / </span> <img src="images/design_paths_2.jpg" alt="design_paths_2" height="150"> [2025] Design Pathways → self-research → manifesto (NTUST) <img src="images/Printing_with_purpose.jpg" alt="Printing_with_purpose" height="150"> [2024] Printing With Purpose: Letterpress, Bookmaking, and Collective Design (Pratt) <span class="title"> / Visual Design Service / </span><br>
+        <img src="images/tpabf_03.png" alt="tpabf_03" height="200">
+        <img src="images/tpabf_06.jpg" alt="tpabf_06" height="100">
+        <img src="images/tpabf_07.png" alt="tpabf_07" height="150">
+        [2024] TPABF: Groovy Quote, Key Visual Design<br>
+        <br> <img src="images/2024_preloader_memory-tapes.gif" alt="2024_preloader_memory-tapes" height="50"> <br>
+    </div>
 
     <div>
         <span class="title"> / Contact / </span><br>
