@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Text Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        #randomText {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            margin: 30px 0;
+            min-height: 60px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        
+        #generateBtn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        #generateBtn:hover {
+            background-color: #0056b3;
+        }
+        
+        #generateBtn:active {
+            transform: scale(0.98);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Wisdom Generator</h1>
+        <div id="randomText">Click the button to get a random message!</div>
+        <button id="generateBtn">Generate Random Text</button>
+    </div>
+
+    <script>
+        // Database of random texts (you can add as many as you want)
+        const textDatabase = [
+            "Design is not just what it looks like and feels like. Design is how it works.",
+            "The best way to predict the future is to design it.",
+            "Simplicity is the ultimate sophistication.",
+            "Good design is as little design as possible.",
+            "Design creates culture. Culture shapes values. Values determine the future.",
+            "Art is the elimination of the unnecessary.",
+            "Design is thinking made visual.",
+            "Less is more.",
+            "Form follows function.",
+            "Design is a solution to a problem. Art is a question to a problem.",
+            "Great design will not sell an inferior product, but it will enable a superior product to achieve its maximum potential.",
+            "The details are not the details. They make the design.",
+            "Design is where science and art break even.",
+            "Good design is obvious. Great design is transparent.",
+            "Design is not for philosophy — it's for life.",
+            "Everything is designed. Few things are designed well.",
+            "Design adds value faster than it adds costs.",
+            "The function of design is letting design function.",
+            "Design is intelligence made visible.",
+            "Accessible design is good design."
+        ];
+
+        // Get DOM elements
+        const textDisplay = document.getElementById('randomText');
+        const generateButton = document.getElementById('generateBtn');
+
+        // Function to generate random text
+        function generateRandomText() {
+            // Get random index from the database
+            const randomIndex = Math.floor(Math.random() * textDatabase.length);
+            const randomText = textDatabase[randomIndex];
+            
+            // Add fade-in animation
+            textDisplay.classList.remove('fade-in');
+            
+            // Small delay to reset animation
+            setTimeout(() => {
+                textDisplay.textContent = randomText;
+                textDisplay.classList.add('fade-in');
+            }, 100);
+        }
+
+        // Add click event listener to button
+        generateButton.addEventListener('click', generateRandomText);
+
+        // Optional: Generate random text on page load
+        // generateRandomText();
+    </script>
+</body>
+</html>
